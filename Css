@@ -1,0 +1,287 @@
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.interactive-box {
+  height: 15vh;
+}
+
+header {
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+header > img {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 300ms opacity ease-in-out;
+}
+
+header > img:hover {
+  opacity: 1;
+}
+
+main {
+  height: 67vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.grid1-container > h1 {
+  font-family: monospace;
+}
+
+.grid2-container > h1 {
+  font-family: monospace;
+}
+
+.grid1-container,
+.grid2-container {
+  text-align: center;
+}
+
+footer {
+  background-color: #b8b6b6;
+  background-image: linear-gradient(147deg, #d7d7d7 0%, #838383 74%);
+
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  column-gap: 3px;
+  row-gap: 3px;
+
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+}
+
+footer > a {
+  opacity: 0.6;
+  transition: 300ms opacity ease-in-out;
+}
+
+footer > a:hover {
+  opacity: 1;
+}
+
+body {
+  background: rgb(2, 0, 36);
+  background-image: linear-gradient(0deg, #36295e, #1c1045);
+}
+
+h1 {
+  color: white;
+}
+
+.input-container {
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 60vh;
+}
+
+footer > p {
+  margin-left: 4%;
+  font-size: medium;
+}
+
+#input-field {
+  width: 35vw;
+  height: 7vh;
+  margin: 1.5rem;
+  font-size: x-large;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding-left: 5px;
+  outline: none;
+}
+
+#input-text,
+.placing-container > h1 {
+  background-color: #bebdbd;
+  background-image: linear-gradient(45deg, #b8b6b6, #c2bfbf);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-size: x-large;
+}
+
+#axis-btn,
+#start-game {
+  cursor: pointer;
+  border: none;
+  background-color: #bebdbd;
+  background-image: linear-gradient(45deg, #b8b6b6, #c2bfbf);
+  font-size: x-large;
+  width: 20vw;
+  height: 10vh;
+  transition: 150ms opacity ease-in-out;
+}
+
+#start-game:hover {
+  opacity: 0.8;
+}
+
+#axis-btn:hover {
+  opacity: 0.8;
+}
+
+.placing-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: auto;
+  height: 100%;
+}
+
+.placing-container > #axis-btn {
+  width: 16vw;
+  height: 9vh;
+}
+
+.placing-container > h1 {
+  font-size: xx-large;
+}
+
+.column {
+  border: 2px solid white;
+  height: 4vh;
+  width: 3vw;
+}
+
+.column-placing {
+  border: 2px solid white;
+  height: 4vh;
+  width: 4vw;
+  cursor: pointer;
+}
+
+/* .column-placing:hover {
+  background-color: rgba(222, 228, 228, 0.7);
+} */
+
+#axis-btn {
+  margin: 1rem;
+  outline: none;
+}
+
+/* Animations for First View */
+
+/* Wavy Logo */
+header > img {
+  transform: rotate(0deg);
+  transform: translateY(60px);
+  animation: wavy 3s ease-in-out infinite alternate 3s, bounce-top 3s ease;
+
+  box-shadow: 0px 5px 50px 1px rgba(16, 8, 43, 0.6);
+}
+
+@keyframes bounce-top {
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Making elements appear slowly */
+
+/* .input-container {
+  opacity: 0;
+  animation: makeVisible 3s forwards;
+} */
+
+/* @keyframes makeVisible {
+  to {
+    opacity: 1;
+  }
+} */
+
+/* Making elements disappear slowly */
+/* TODO:HERE NOW */
+/* .input-container {
+  animation: makeInvisible 5s forwards;
+} */
+
+/* @keyframes makeInvisible {
+  to {
+    opacity: 0;
+  }
+} */
+
+/* ***********First View Ends Here************* */
+
+/* Animations for Second View */
+
+/* Making Elements appear slowly */
+/* .placing-container {
+  opacity: 0;
+  animation: makeVisible 5s forwards;
+} */
+
+/* Making elements disappear slowly */
+
+/* .placing-container {
+  animation: makeInvisible 5s forwards;
+}
+
+
+/* ***********Second View Ends Here************* */
+
+/* Animations for third view */
+
+/* Making elements appear slowly */
+/* .grid1-container,
+.grid2-container {
+  opacity: 0;
+  animation: makeVisible 5s forwards;
+}
+
+
+/* Making elements disappear slowly */
+
+/* .grid1-container,
+.grid2-container {
+  animation: makeInvisible 5s forwards;
+} */
+
+/* ***********Third View Ends Here************* */
+
+/* .carrier {
+  
+}
+
+.column-placing:hover {
+  background-color: red;
+}
+
+.column-placing:hover ~ .column-placing:nth-of-type(5) {
+  background-color: red;
+} */
